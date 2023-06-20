@@ -11,7 +11,7 @@ services:
     volumes:
       - pg_data_production:/var/lib/postgresql/data
   backend:
-    image: olkio/kittygram_backend
+    image: umataullin/kittygram_backend
     env_file: .env
     volumes:
       - static_volume:/backend_static
@@ -20,13 +20,13 @@ services:
       - db
 
   frontend:
-    image: olkio/kittygram_frontend
+    image: umataullin/kittygram_frontend
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static_volume:/frontend_static
   gateway:
-    image: olkio/kittygram_gateway
+    image: umataullin/kittygram_gateway
     env_file: .env
     volumes:
       - static_volume:/static/
