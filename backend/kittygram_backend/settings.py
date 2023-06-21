@@ -3,13 +3,10 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
-from django.core.exceptions import ImproperlyConfigured
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
-if not SECRET_KEY:
-    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+SECRET_KEY = os.getenv('SECRET_KEY', '')
 
 DEBUG = bool(os.getenv('DEBUG'))
 
