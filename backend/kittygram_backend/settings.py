@@ -1,6 +1,8 @@
 # flake8: noqa
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+load_dotenv()
 from django.core.exceptions import ImproperlyConfigured
 
 BASE_DIR = Path(__file__).resolve().parent.parent
