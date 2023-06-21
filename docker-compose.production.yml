@@ -15,7 +15,7 @@ services:
     image: umataullin/kittygram_backend
     env_file: .env
     volumes:
-      - static_volume:/backend_static
+      - kittygram_static:/backend_static
       - media:/app/media
     depends_on:
       - db
@@ -25,12 +25,12 @@ services:
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static_volume:/frontend_static
+      - kittygram_static:/frontend_static
   gateway:
     image: umataullin/kittygram_gateway
     env_file: .env
     volumes:
-      - static_volume:/static/
+      - kittygram_static:/static/
       - media:/media
     ports:
       - 9000:80
