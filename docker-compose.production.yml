@@ -19,7 +19,6 @@ services:
       - media:/app/media
     depends_on:
       - db
-
   frontend:
     image: umataullin/kittygram_frontend
     env_file: .env
