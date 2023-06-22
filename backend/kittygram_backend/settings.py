@@ -12,7 +12,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'default_key')
 DEBUG = bool(os.getenv('DEBUG'))
 # DEBAG = True
 
-ALLOWED_HOSTS = str(os.getenv('ALLOWED_HOSTS', default=['127.0.0.1', 'localhost']))
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
 # ALLOWED_HOSTS = ['158.160.7.223', '127.0.0.1', 'localhost', 'umataullin.dynnamn.ru']
 
 INSTALLED_APPS = [
