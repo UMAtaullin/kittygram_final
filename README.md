@@ -12,20 +12,20 @@ Kittygram — социальная сеть для обмена фотограф
 - настроить автоматическое тестирование и деплой этого проекта на удалённый сервер.
 
 ## Стэк технологии
+
 - Python 3.9
 - Django 3.2.3
 - Django REST Framework 3.12.4
+- PostgreSQL
 - Docker
 - CI/CD
-- PostgreSQL
+- GitHub Actions
 - Gunicorn 20.1.0
 - Nginx 1.18.0
-- Сertbot 2.6.0
-- JS
 
 ## Инструкция по запуску
 
-1. Клонировать репозиторий на сервер
+1. Клонируйте репозиторий на сервер:
     ```
     git clone git@github.com:UMAtaullin/kittygram_final.git
     ```
@@ -149,7 +149,7 @@ Kittygram — социальная сеть для обмена фотограф
 
 2. Получение списка всех котиков:
     ```bash
-        [GET]https://<ваш домен>/api/cats/
+    [GET]https://<ваш домен>/api/cats/
     ```
 
 ## Автор
